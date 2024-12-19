@@ -1202,7 +1202,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     cmd = f'yt-dlp -x --audio-format {ext} -o "{name}.{ext}" "{url}"'
                     download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                     os.system(download_cmd)
-                    cc2 = f'**[🎵] Audio_ID : {str(count).zfill(3)}.**\n\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : **{name1}** {my_name}.{ext}\n\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : `{b_name}`\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {CR}**'
+                    cc2 = f'**[🎵] Audio_ID : {str(count).zfill(3)}.**\n\n**File Name** : **{name1}** {my_name}.{ext}\n\n**Batch Name** : `{b_name}`\n\n**Downloaded By : {CR}**'
                     await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc2)
                     #if accept_logs == 1:  
                         #file_id = message.document.file_id
@@ -1219,7 +1219,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     cmd = f'yt-dlp -o "{name}.{ext}" "{url}"'
                     download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                     os.system(download_cmd)
-                    cc3 = f'**[🖼️] Image_ID : {str(count).zfill(3)}.**\n\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : **{name1}** {my_name}.{ext}\n\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : `{b_name}`\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {CR}**'
+                    cc3 = f'**[🖼️] Image_ID : {str(count).zfill(3)}.**\n\n**File Name** : **{name1}** {my_name}.{ext}\n\n**Batch Name** : `{b_name}`\n\n**Downloaded By : {CR}**'
                     message = await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc3)
                     if accept_logs == 1:  
                         file_id = message.document.file_id
@@ -1351,7 +1351,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
     await m.reply_text(f"{end_message}")
     if accept_logs == 1:
         await bot.send_message(-1002155787742, f"{end_message}")
-    await m.reply_text("That's it ❤️")
+    await m.reply_text("DONE✅")
 
 
 #===================== TEXT MESSAGES THAT BOT WILL SEND ===============
@@ -1479,7 +1479,7 @@ OWNER_TEXT = """
 
 🚀 **General Commands:**
 
-12. **/pathan** - 💡 Type this before sending your **📃.txt** file.
+12. **/Shivam** - 💡 Type this before sending your **📃.txt** file.
 
 13. **/start** - 📛 Start the bot and receive a welcome message.
 
@@ -1509,7 +1509,7 @@ OWNER_TEXT = """
 
 📌 **Note:** Commands are restricted to the bot owner or authorized users only.
 
-Feel free to contact @DRMHELPBOT for further assistance or subscription details.
+Feel free to contact @Bhandara_2_O for further assistance or subscription details.
 
 ✨ Have fun and happy chatting! ✨
 
@@ -1546,6 +1546,6 @@ keyboard = InlineKeyboardMarkup(
 
 #================== id command button ===========================
 
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="Send Here", url=f"https://t.me/DRMHELPBOT")]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="Send Here", url=f"https://t.me/Bhandara_2_O")]])
 
 bot.run()
